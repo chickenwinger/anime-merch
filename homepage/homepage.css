@@ -1,0 +1,265 @@
+/* SLIDER START */
+
+.slide-bg {
+    background: url(slider/bgpurple.png) no-repeat center center fixed;
+    background-size: cover;
+    height: 750px;
+    width: 100%;
+}
+
+.slider-container {
+    background: rgba(0, 0, 0, 0.3);
+    width: 1000px;
+    height: 580px;
+    position: relative;
+    margin: auto;
+    vertical-align: middle;
+    text-align: center;
+    box-shadow: .5rem .5rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 3.6%;
+    width: auto;
+    height: 85.9%;
+    padding: 16px;
+    margin-top: -21px;
+    color: cyan;
+    font-weight: bold;
+    font-size: 32px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    line-height: 500px;
+    vertical-align: middle;
+}
+
+.next {
+    right: 0;
+    text-align: right;
+}
+
+.prev {
+    left: 0;
+    text-align: left;
+}
+
+.next:hover {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.7), transparent);
+}
+
+.prev:hover {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent);
+}
+
+.slider-items {
+    display: none;
+    vertical-align: middle;
+    text-align: center;
+    overflow: hidden;
+}
+
+.slider-items img {
+    margin-bottom: -2%;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+    max-height: 550px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.slider-items img:hover {
+    margin-top: 2%;
+    margin-bottom: -4%;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.slider-caption {
+    color: #f2f2f2;
+    font-size: 24px;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.dot {
+    cursor: pointer;
+    height: 7px;
+    width: 30px;
+    margin: 0;
+    border-radius: 10px;
+    background: rgb(0, 0, 0);
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    text-align: center;
+}
+
+.active,
+.dot:hover {
+    background-color: cyan;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .prev,
+    .next,
+    .slider-caption {
+        font-size: 11px
+    }
+}
+
+
+/* SLIDER END */
+
+
+/* CATEGORY START */
+
+.category-bg {
+    background: url(category/bgred.jpg) center center fixed;
+    background-size: cover;
+    height: 750px;
+    width: 100%;
+}
+
+.category-caption {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    color: orange;
+    font-family: Calibri;
+    font-size: 36px;
+    text-shadow: 0px 2px 2px black;
+}
+
+.category {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    height: 270px;
+    transition: 0.5s;
+    box-shadow: .5rem .5rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.category:hover .category-caption {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-shadow: none;
+    transition: 0.5s;
+}
+
+.category:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+
+/* CATEGORY END */
+
+
+/* PRODUCT TAG START */
+
+.anime-bg {
+    background: url(tags/bgblue.png) center center fixed;
+    background-size: cover;
+    height: 1350px;
+    width: 100%;
+}
+
+.anime-bg table tr td img {
+    vertical-align: top;
+}
+
+.anime-square,
+.anime-xrec,
+.anime-yrec {
+    margin: 0;
+    padding: 0;
+    transition: 0.3s;
+}
+
+.anime-square {
+    width: 420px;
+    height: 420px;
+}
+
+.anime-yrec {
+    width: 210px;
+    height: 420px;
+}
+
+.anime-xrec {
+    width: 420px;
+    height: 210px;
+}
+
+.anime-caption {
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-family: Calibri;
+    font-size: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.anime-search {
+    color: white;
+    background: black;
+    border-radius: 6px;
+    vertical-align: middle;
+}
+
+.anime-xrec:hover,
+.anime-yrec:hover,
+.anime-square:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.anime-caption:hover {
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.anime-search:hover {
+    background: white;
+    color: black;
+    transition: 0.3s;
+}
+
+
+/* PRODUCT TAG END */

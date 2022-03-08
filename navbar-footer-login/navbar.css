@@ -1,0 +1,199 @@
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5em;
+  background: black;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: cyan;
+  border-radius: 25px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: white;
+}
+
+.navbar {
+  top: 0;
+  position: sticky;
+  background: rgb(73, 73, 73);
+  color: cyan;
+  z-index: 100;
+}
+
+form.search input[type="text"] {
+  padding: 10px;
+  font-size: 12px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border: 1px solid cyan;
+  float: left;
+  width: 420px;
+  outline: none;
+}
+
+form.search button {
+  margin-left: -1%;
+  float: left;
+  height: 36px;
+  width: 10%;
+  padding: 7px;
+  background: cyan;
+  border: 1px solid cyan;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  cursor: pointer;
+  outline: none;
+}
+
+.nav-items {
+  cursor: pointer;
+  border: 2px solid cyan;
+  border-radius: 5px;
+  line-height: 2;
+  vertical-align: middle;
+  height: 30px;
+  width: 100px;
+  font-family: Arial;
+}
+
+.nav-items-a {
+  color: cyan;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.btndropdown {
+  color: cyan;
+  border: 2px solid cyan;
+  border-radius: 5px;
+  line-height: 2;
+  vertical-align: middle;
+  height: 30px;
+  width: 100px;
+  font-family: Arial;
+  cursor: default;
+}
+
+.dropdown-items {
+  display: none;
+  position: absolute;
+  background-color: cyan;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 6px;
+  transform: translateX(-27px);
+}
+
+.dropdown-items a {
+  font-family: Arial;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.navlogin {
+  background: cyan;
+  color: black;
+  border: 2px solid cyan;
+  border-radius: 15px;
+  line-height: 2;
+  font-family: Arial;
+  margin-left: 10%;
+  width: 77px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.navlogout {
+  background: orange;
+  color: black;
+  border: 2px solid orange;
+  border-radius: 15px;
+  line-height: 2;
+  font-family: Arial;
+  margin-left: 10%;
+  width: 100px;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 5px 10px;
+  font-size: 12px;
+  transition: 0.2s;
+}
+
+.navlogin:focus,
+.navlogout:focus {
+  outline: 0;
+}
+
+.nav-items:hover,
+.navlogin:hover,
+.navlogout:hover {
+  background: white;
+  color: black;
+  border: 2px solid white;
+  transition: 0.2s;
+}
+
+.nav-items:hover .nav-items-a {
+  color: black;
+}
+
+.dropdown:hover .dropdown-items {
+  display: block;
+}
+
+.dropdown-items a:hover {
+  background: whitesmoke;
+  transition: 0.2s;
+}
+
+.dropdown:hover .btndropdown {
+  background: white;
+  color: black;
+  border: 2px solid white;
+}
+
+.footer-table {
+  border-spacing: 200px 0;
+}
+
+.table-header {
+  width: 200px;
+  color: cyan;
+  background: black;
+  font-size: 24px;
+  font-family: Arial;
+  text-align: center;
+}
+
+.admin {
+  position: fixed;
+  z-index: 100;
+  top: 85px;
+  right: 10px;
+  font-size: 18px;
+  background: black;
+  color: cyan;
+  font-family: Arial;
+  font-weight: 600;
+  padding: 0 12px 0 12px;
+  line-height: 2;
+  border-radius: 10px;
+  border: 2px solid cyan;
+}
+
+.admin:hover {
+  color: black;
+  background: white;
+  border: 2px solid black;
+}

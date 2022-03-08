@@ -1,0 +1,106 @@
+.cart-bg {
+    background: url(bgorange.png) center center no-repeat fixed;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+
+.cart-table {
+    width: 50%;
+    height: 50px;
+    margin: 0 auto;
+    background: black;
+    border-spacing: 30px 20px;
+    font-family: Arial;
+    border-radius: 5px;
+    margin-bottom: 2%;
+    animation: cartDisplay;
+    animation-duration: 1s;
+}
+
+.cartDisplay {
+    animation: cartDisplay;
+    animation-duration: 1s;
+}
+
+.cart-info {
+    width: 200px;
+    height: 20px;
+    padding: 0 20px;
+}
+
+.cart-table tr td input[type="number"] {
+    background: none;
+    outline: none;
+    text-align: center;
+    border: 1px solid #f75394;
+    font-size: 18px;
+    color: #f75394;
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.cart-table tr td .apparel-size {
+    color: cyan;
+    border: none;
+    background: none;
+    font-size: 18px;
+}
+
+.cart-table tr td button {
+    border: 2px solid #f75394;
+    width: 170px;
+    height: 30px;
+    background: none;
+    color: #f75394;
+    padding: 0 auto;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s;
+}
+
+.cart-table tr td button:hover {
+    background: #f75394;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    transition: 0.2s;
+}
+
+@keyframes cartDisplay {
+    from {
+        transform: translateY(-50px);
+        opacity: 0.3;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.no-cart {
+    position: relative;
+    background: url(search-no-result.gif) center center no-repeat;
+    background-size: 100%;
+    height: 500px;
+    width: 500px;
+}
+
+.no-cart-desc {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    width: 100%;
+    font-family: Arial;
+    font-size: 35px;
+    text-shadow: 2px 2px black;
+    color: white;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    word-break: break-all;
+}
+

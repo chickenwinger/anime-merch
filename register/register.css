@@ -1,0 +1,81 @@
+.register-bg {
+  background: url(bggreen.png) center center no-repeat fixed;
+  background-size: cover;
+  height: auto;
+  width: 100%;
+}
+
+.register-content {
+  position: relative;
+  background: url(login-content-bg.jpg) center center no-repeat;
+  height: auto;
+  width: 700px;
+  background-size: 100% 100%;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0px 0px 20px black;
+  color: black;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.register-content table {
+  margin: 20px auto 0 auto;
+  font-size: 24px;
+}
+
+.register-content table tr {
+  padding-bottom: 30px;
+}
+
+.register-content table tr td input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 10px;
+}
+
+.register-input {
+  width: 400px;
+  height: 30px;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 2px 8px 2px 8px;
+  font-size: 20px;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 800;
+}
+
+.btnregister {
+  width: 150px;
+  height: 40px;
+  background: black;
+  border: 5px solid black;
+  border-radius: 50px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btnregister:hover {
+  background: white;
+  color: black;
+}
+
+.register-fade-in {
+  animation: registerfadein;
+  animation-duration: 0.8s;
+}
+
+@keyframes registerfadein {
+  from {
+    transform: translateY(20px);
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

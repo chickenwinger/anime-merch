@@ -1,0 +1,277 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.admin-bg {
+  background: url(admin-bg.png) center center fixed no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-new-form-background {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 101;
+  display: none;
+}
+
+.modify-form-background {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 101;
+}
+
+.add-new-form,
+.modify-form {
+  font-family: 'Titillium Web', sans-serif;
+  background: url(admin-form.jpg) center center no-repeat;
+  box-shadow: 0px 0px 30px black;
+  background-size: cover;
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 900px;
+  height: 550px;
+  margin: 1.5% auto;
+  color: cyan;
+}
+
+.modify-form {
+  height: 500px;
+  margin: 6% auto;
+}
+
+.add-new-form table,
+.modify-form table {
+  border-spacing: 70px 18px;
+  margin: 0 auto;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.add-new-input,
+.modify-input {
+  width: 300px;
+  height: 30px;
+  font-size: 18px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 6px;
+  border: 1px solid cyan;
+  outline: 0;
+  color: cyan;
+  background: black;
+}
+
+#file-upload {
+  border-radius: 6px;
+  outline: none;
+  background: black;
+  width: 310px;
+  border: 1px solid cyan;
+  font-size: 18px;
+}
+
+.id_input {
+  color: cyan;
+  font-size: 23px;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+.btn-add-new,
+.btnupdate {
+  margin-top: 20px;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  text-align: center;
+  width: 100px;
+  padding: 2px auto 2px auto;
+  background: black;
+  color: cyan;
+  border: 3px solid black;
+  border-radius: 25px;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn-add-new:hover,
+.btnupdate:hover {
+  background: cyan;
+  color: black;
+}
+
+.add-new-close {
+  position: absolute;
+  color: black;
+  font-size: 26px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: -80px auto auto 860px;
+}
+
+.modify-close {
+  position: absolute;
+  color: black;
+  font-size: 26px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 7px auto auto 860px;
+}
+
+.add-new-close:hover {
+  color: cyan;
+  transform: rotate(90deg);
+  transition: 0.3s;
+}
+
+.modify-close:hover {
+  color: cyan;
+  transform: rotate(90deg);
+  transition: 0.3s;
+}
+
+.add-new-open,
+.admin-logout {
+  position: fixed;
+  text-align: center;
+  font-size: 27px;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 900;
+  color: cyan;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  background: black;
+  width: 220px;
+  cursor: pointer;
+  right: 0;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.add-new-open:hover {
+  background: lime;
+  color: white;
+  transition: 0.5s;
+}
+
+.admin-logout:hover {
+  background: red;
+  color: white;
+  transition: 0.5s;
+}
+
+.addnew-popup,
+.modify-popup {
+  animation: addnew-popup;
+  animation-duration: 1s;
+}
+
+@keyframes addnew-popup {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.product-list-table {
+  font-family: Arial;
+  color: cyan;
+  border: 1px solid black;
+  text-align: center;
+  background: black;
+  box-shadow: 5px 5px 20px black;
+}
+
+.product-list-header th {
+  font-size: 18px;
+  padding: 2px;
+  border: 1px solid cyan;
+}
+
+.product-list-table tr:not(.product-list-header) {
+  color: black;
+  background: cyan;
+  height: 50px;
+}
+
+.btnmodify,
+.btndelete {
+  color: black;
+  transition: 0.3s;
+}
+
+.btnmodify:hover,
+.btndelete:hover {
+  color: white;
+  transition: 0.3s;
+}
+
+.delete-confirm-background {
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  width: 100%;
+  height: 100%;
+  font-family: Calibri;
+  z-index: 999;
+}
+
+.delete-confirm-popup {
+  background: whitesmoke;
+  position: relative;
+  padding: 50px;
+  width: 500px;
+  margin: 12% auto;
+  border-radius: 10px;
+  animation: confirmDelete;
+  animation-duration: 1s;
+  z-index: 1000;
+}
+
+.btnDeleteConfirm {
+  text-decoration: none;
+  background: black;
+  font-size: 24px;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+.btnDeleteConfirm:hover {
+  background: blue;
+  transition: 0.2s;
+}
+
+@keyframes confirmDelete {
+  from {
+    opacity: 0.3;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+  }
+}

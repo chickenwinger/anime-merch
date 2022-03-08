@@ -1,0 +1,245 @@
+.cart-bg {
+    background: url(bgorange.png) center center no-repeat fixed;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+
+.cart-table {
+    width: 57%;
+    height: 50px;
+    margin-left: 8%;
+    background: black;
+    border-spacing: 30px 20px;
+    font-family: Arial;
+    border-radius: 5px;
+    margin-bottom: 2%;
+    animation: cartDisplay;
+    animation-duration: 1s;
+}
+
+.cart-info {
+    width: 200px;
+    height: 20px;
+    padding: 0 20px;
+}
+
+.cart-table tr td input[type="number"] {
+    background: none;
+    outline: none;
+    text-align: center;
+    border: 1px solid #f75394;
+    font-size: 18px;
+    color: #f75394;
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.cart-table tr td .apparel-size {
+    color: cyan;
+    border: none;
+    background: none;
+    font-size: 18px;
+}
+
+.cart-table tr td button {
+    border: 2px solid #f75394;
+    width: 170px;
+    height: 30px;
+    background: none;
+    color: #f75394;
+    padding: 0 auto;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s;
+}
+
+.cart-table tr td button:hover {
+    background: #f75394;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    transition: 0.2s;
+}
+
+@keyframes cartDisplay {
+    from {
+        transform: translateY(-50px);
+        opacity: 0.3;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.no-cart {
+    position: relative;
+    background: url(search-no-result.gif) center center no-repeat;
+    background-size: 100%;
+    height: 500px;
+    width: 500px;
+}
+
+.no-cart-desc {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    width: 100%;
+    font-family: Arial;
+    font-size: 35px;
+    text-shadow: 2px 2px black;
+    color: white;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    word-break: break-all;
+}
+
+.all-product-link {
+    position: absolute;
+    font-family: Arial;
+    left: 22%;
+    top: 55%;
+    font-size: 35px;
+    text-shadow: 2px 2px black;
+    color: white;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    word-break: break-all;
+}
+
+.all-product-link:hover {
+    color: cyan;
+    transition: 0.3s;
+}
+
+.total-price {
+    position: fixed;
+    right: 8%;
+    top: 21%;
+    border-radius: 7px;
+    width: 25%;
+    height: 200px;
+    color: cyan;
+    font-family: Arial;
+    background: black;
+    z-index: 98;
+    text-align: right;
+    animation: priceDisplay;
+    animation-duration: 1s;
+}
+
+@keyframes priceDisplay {
+    from {
+        transform: translateX(100px);
+        opacity: 0.3;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.total-price-content {
+    font-size: 24px;
+    padding-right: 20%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 30px;
+}
+
+.checkout, .find-more {
+    width: 100%;
+    background: none;
+    border: 2px solid #f75394;
+    padding: 20px auto;
+    border-radius: 10px;
+    font-size: 30px;
+    color: #f75394;
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s;
+}
+
+.checkout:hover, .find-more:hover {
+    background: #f75394;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    transition: 0.2s;
+}
+
+.find-more:hover, .find-more2:hover, .find-more3:hover {
+    background: cyan;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    transition: 0.2s;
+}
+
+.find-more {
+    border: 2px solid cyan;
+    color: cyan;
+    background: black;
+    font-family: Calibri;
+    padding: 7px 25px;
+    font-size: 24px;
+    width: 327px;
+    bottom: 46%;
+    left: 67%;
+    position: fixed;
+    text-align: center;
+    z-index: 99;
+    animation: priceDisplay;
+    animation-duration: 1s;
+}
+
+.find-more3 {
+    border: 2px solid cyan;
+    border-radius: 10px;
+    color: cyan;
+    background: black;
+    font-family: Calibri;
+    padding: 7px 25px;
+    font-size: 24px;
+    width: 327px;
+    bottom: 39.7%;
+    left: 67%;
+    position: fixed;
+    text-align: center;
+    z-index: 99;
+    animation: priceDisplay;
+    animation-duration: 1s;
+}
+
+.find-more2 {
+    left: 37.5%;
+    bottom: 67%;
+    border: 2px solid cyan;
+    border-radius: 10px;
+    color: cyan;
+    background: black;
+    font-family: Calibri;
+    padding: 7px 25px;
+    font-size: 24px;
+    width: 327px;
+    position: fixed;
+    text-align: center;
+    animation: orderHistory;
+    animation-duration: 1s;
+}
+
+@keyframes orderHistory {
+    from {
+        transform: translateY(-100px);
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
