@@ -10,10 +10,7 @@
   <title>Manage Product</title>
   <link rel="stylesheet" href="admin.css">
 </head>
-
-
-<!-- unfuenfenfnenf -->
-
+<!-- HELLO ARKSHAY -->
 
 <body>
   <!-- ADD NEW START -->
