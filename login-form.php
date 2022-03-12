@@ -21,6 +21,12 @@
                <tr>
                   <td colspan="2"><input type="password" name="password" required /></td>
                </tr>
+               <tr>
+                  <td>Security Code</td>
+               </tr>
+               <tr>
+                  <td colspan="2"><input type="int" name="code" required /></td>
+               </tr>
                <tr style="height: 10px;"></tr>
                <tr>
                   <td align="center" colspan="3">

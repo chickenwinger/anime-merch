@@ -120,6 +120,15 @@
                      <input class="register-input" type="password" name="confirmpassword" required />
                   </td>
                </tr>
+               <tr>
+                  <td colspan="2">Security Code [Please remember this code]</td>
+               </tr>
+               <tr>
+                  <td colspan="4">
+                     <input class="register-input" type="int" name="code" required />
+                  </td>
+               </tr>
+               <tr>
                <tr style="height: 20px;"></tr>
                <tr>
                   <td colspan="4" align="center">
