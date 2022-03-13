@@ -2,7 +2,7 @@
 <html>
 
 <head>
-   <meta http-equiv="refresh" content="60;url=logout.php" />    //code for session timeout 60 seconds
+   <!-- meta http-equiv="refresh" content="240;url=logout.php"       -->
    <title>MDL Store</title>
    <link rel="stylesheet" href="navbar-footer-login/navbar.css" />
    <link rel="stylesheet" href="navbar-footer-login/footer.css" />
