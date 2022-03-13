@@ -9,12 +9,11 @@
 
     $login_username = mysqli_real_escape_string($conn, $_POST['username']);
     $login_password = mysqli_real_escape_string($conn, $_POST['password']);
-    $login_code = mysqli_real_escape_string($conn, $_POST['code']);
 
     if(isset($_POST['btnlogin'])) {
         //check validity
         $sql = "SELECT * FROM user WHERE user_name = '".$login_username."'
-        AND user_password = '".md5($login_password)."'" AND code = '".md5($login_code)."'";
+        AND user_password = '".md5($login_password)."'"
         $result = mysqli_query($conn, $sql);
 
         //match database
@@ -28,7 +27,6 @@
             $_SESSION['userid'] = $row['user_id'];
             $_SESSION['name'] = $row['user_fullname'];
             $_SESSION['password'] = $row['user_password'];
-            $_SESSION['code'] = $row['code'];
             $_SESSION['role'] = $row['user_role'];
             $_SESSION['login'] = "logged-in";
         }
