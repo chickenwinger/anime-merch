@@ -13,7 +13,7 @@
     if(isset($_POST['btnlogin'])) {
         //check validity
         $sql = "SELECT * FROM user WHERE user_name = '".$login_username."'
-        AND user_password = '".md5($login_password)."'"
+        AND user_password = '".md5($login_password)."'";
         $result = mysqli_query($conn, $sql);
 
         //match database
