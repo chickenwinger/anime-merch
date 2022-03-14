@@ -16,10 +16,12 @@
 <body>
    <?php include('navbar.php'); ?>
    <?php include('login-form.php'); ?>
-   <?php if (isset($_SESSION['login'])) {
+   <?php
+   if (isset($_SESSION['login'])) {
       echo ("<script>alert('Please log out to register an account!')</script>");
       echo ("<script>window.location.href='homepage.php'</script>");
-   } ?>
+   }
+   ?>
 
    <!-- REGISTER START -->
    <div class="register-bg">
@@ -167,11 +169,20 @@
       $postal_code = mysqli_real_escape_string($conn, $_POST['postal_code']);
       $state = mysqli_real_escape_string($conn, $_POST['state']);
 
+      $number = preg_match('@[0-9]@', $user_password);
+      $uppercase = preg_match('@[A-Z]@', $user_password);
+      $lowercase = preg_match('@[a-z]@', $user_password);
+      $specialChars = preg_match('@[^\w]@', $user_password);
 
       //check pwd = cfm pwd
       if ($user_password !== $user_confirmpassword) {
          echo "<script>alert('Password and confirm password not matched!');";
          die("window.lcoation.href='register.php';</script>");
+      
+      //PASSWORD STRENGTH CHECK
+      } elseif ($user_password == $user_confirmpassword && strlen($user_password) < 8 || !$number || !$uppercase || !$lowercase || !$specialChars) {
+         echo "<script>alert('Password must be at least 8 characters in length and must contain at least one number, one upper case letter, one lower case letter and one special character.');window.history.go(-1);</script>";
+         echo "<script>window.location.href='register.php';</script>";
       }
 
       //add register info
