@@ -7,6 +7,8 @@
     $dbname = 'wdt_assignment';
     $conn = mysqli_connect($server, $username, $password, $dbname);
 
+    //prevent SQL injection
+    $login_code = stripcslashes($login_code);
     $login_username = mysqli_real_escape_string($conn, $_POST['username']);
     $login_password = mysqli_real_escape_string($conn, $_POST['password']);
     $login_code = mysqli_real_escape_string($conn, $_POST['code']);
