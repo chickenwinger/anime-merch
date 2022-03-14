@@ -20,7 +20,7 @@
 
         //match database
         if (mysqli_affected_rows($conn) == 0) {
-            echo "<script>alert('Wrong username/password/last five digits of IC number! Please try again.')</script>;";
+            echo "<script>alert('Wrong username/password/last five digits of your IC number! Please try again.')</script>;";
             echo "<script>window.location.href='homepage.php';</script>";
         }
 
