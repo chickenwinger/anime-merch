@@ -9,16 +9,18 @@
 
     $login_username = mysqli_real_escape_string($conn, $_POST['username']);
     $login_password = mysqli_real_escape_string($conn, $_POST['password']);
+    $login_code = mysqli_real_escape_string($conn, $_POST['code']);
 
     if(isset($_POST['btnlogin'])) {
         //check validity
-        $sql = "SELECT * FROM user WHERE user_name = '".$login_username."'
-        AND user_password = '".md5($login_password)."'";
+        $sql = "SELECT * FROM user WHERE user_name = '$login_username'
+        AND user_password = '".md5($login_password)."'
+        AND code = '$login_code'";
         $result = mysqli_query($conn, $sql);
 
         //match database
         if (mysqli_affected_rows($conn) == 0) {
-            echo "<script>alert('Wrong username/password! Please try again.')</script>;";
+            echo "<script>alert('Wrong username/password/last five digits of IC number! Please try again.')</script>;";
             echo "<script>window.location.href='homepage.php';</script>";
         }
 
@@ -28,6 +30,7 @@
             $_SESSION['name'] = $row['user_fullname'];
             $_SESSION['password'] = $row['user_password'];
             $_SESSION['role'] = $row['user_role'];
+            $_SESSION['code'] = $row['code'];
             $_SESSION['login'] = "logged-in";
         }
 

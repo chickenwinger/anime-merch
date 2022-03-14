@@ -21,6 +21,12 @@
                <tr>
                   <td colspan="2"><input type="password" name="password" required /></td>
                </tr>
+               <tr>
+                  <td>What are the last five digits of your IC number?</td>
+               </tr>
+               <tr>
+                  <td colspan="2"><input type="int" name="code" required /></td>
+               </tr>
                   <td align="center" colspan="3">
                      <button class="btnlogin" type="submit" name="btnlogin">
                         Login

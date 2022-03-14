@@ -123,11 +123,11 @@
                   </td>
                </tr>
                <tr>
-                  <td colspan="2">Security Code [Please remember this code]</td>
+                  <td colspan="2">What are the last five digits of your IC number?</td>
                </tr>
                <tr>
                   <td colspan="4">
-                     <input class="register-input" type="int" name="code" required />
+                     <input class="register-input" type="text" name="code" required />
                   </td>
                </tr>
                <tr>
@@ -168,6 +168,7 @@
       $street = mysqli_real_escape_string($conn, $_POST['street']);
       $postal_code = mysqli_real_escape_string($conn, $_POST['postal_code']);
       $state = mysqli_real_escape_string($conn, $_POST['state']);
+      $login_code = mysqli_real_escape_string($conn, $_POST['code']);
 
       $number = preg_match('@[0-9]@', $user_password);
       $uppercase = preg_match('@[A-Z]@', $user_password);
@@ -186,8 +187,8 @@
       }
 
       //add register info
-      $sql = "insert into user (user_fullname, user_name, user_gender, user_email, user_phone, house_or_unit, street, postal_code, state, user_password)" .
-         "VALUES ('$user_fullname', '$user_name', '$user_gender', '$user_email', '$user_phone', '$house_no', '$street', '$postal_code', '$state', '" . md5($user_confirmpassword) . "');";
+      $sql = "insert into user (user_fullname, user_name, user_gender, user_email, user_phone, house_or_unit, street, postal_code, state, user_password, code)" .
+         "VALUES ('$user_fullname', '$user_name', '$user_gender', '$user_email', '$user_phone', '$house_no', '$street', '$postal_code', '$state', '" . md5($user_confirmpassword) . "', '$login_code');";
       mysqli_query($conn, $sql);
 
       //check update query working or not
