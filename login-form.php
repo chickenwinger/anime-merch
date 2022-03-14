@@ -8,7 +8,7 @@
             <i class="fa fa-close" onclick="loginPopupClose()"></i>
          </div>
          <table align="center" class="login-form">
-            <form action="login.php" method="POST">
+            <form action="login.php" method="POST" name="login-form-tag" onsubmit="return submitUserForm();">
                <tr>
                   <td>Username:</td>
                </tr>
@@ -27,6 +27,15 @@
                <tr>
                   <td colspan="2"><input type="int" name="code" required /></td>
                </tr>
+               <tr style="height: 20px;"></tr>
+               <tr>
+                  <td>
+                     <div class="g-recaptcha" data-sitekey="6LenZtweAAAAAHIquCCQdLrpsWHYtO4bKNNsCi3W" data-callback="verifyCaptcha"></div>
+                     <div id="g-recaptcha-error"></div>
+                  </td>
+               </tr>
+               <tr style="height: 10px;"></tr>
+               <tr>
                   <td align="center" colspan="3">
                      <button class="btnlogin" type="submit" name="btnlogin">
                         Login
@@ -48,5 +57,22 @@
          </table>
       </div>
    </div>
+   <script src='https://www.google.com/recaptcha/api.js'></script>
+   <script>
+      var recaptcha_response = '';
+
+      function submitUserForm() {
+         if (recaptcha_response.length == 0) {
+            document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">This field is required.</span>';
+            return false;
+         }
+         return true;
+      }
+
+      function verifyCaptcha(token) {
+         recaptcha_response = token;
+         document.getElementById('g-recaptcha-error').innerHTML = '';
+      }
+   </script>
    <script src="navbar-footer-login/login.js"></script>
    <!-- LOGIN END -->
