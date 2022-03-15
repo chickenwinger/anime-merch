@@ -1,11 +1,15 @@
 <!-- NAVIGATION START -->
 <?php session_start() ?>
 <div class="navbar">
-    <?php if (isset($_SESSION['login'])) {
+    <!-- USER ACCESS CONTROL - DENY ADMIN ACCESS -->
+    <?php
+    if (isset($_SESSION['login'])) {
         if ($_SESSION['role'] == "0") {
-            echo ("<script>window.location.href='admin.php'</script>");
+            echo "<script>alert('You do not have the access to this page!');</script>";
+            echo "<script>window.location.href='admin.php'</script>";
         }
-    } ?>
+    }
+    ?>
     <table cellpadding="0" cellspacing="0" style="text-align: center;">
         <tr>
             <td width="5%">
@@ -61,7 +65,8 @@
                 <?php if (isset($_SESSION['login']) && !empty($_SESSION['login'])) {
                     if ($_SESSION['role'] == "1") { ?>
                         <a href="cart.php"><img src="navbar-footer-login/cart.png" alt="storecart" width="30%" /></a>
-                    <?php } } else { ?>
+                    <?php }
+                } else { ?>
                     <a href="#"><img src="navbar-footer-login/cart.png" alt="storecart" width="30%" onclick="loginPopup(); loginAlert();" /></a>
                 <?php } ?>
             </td>
@@ -75,6 +80,7 @@
         function logouthover() {
             document.querySelector(".navlogout").innerHTML = "LogOut";
         }
+
         function logouthover2() {
             document.querySelector(".navlogout").innerHTML = "<?php echo $_SESSION['name'] ?>";
         }

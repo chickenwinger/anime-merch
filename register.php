@@ -179,16 +179,19 @@
       if ($user_password !== $user_confirmpassword) {
          echo "<script>alert('Password and confirm password not matched!');";
          die("window.lcoation.href='register.php';</script>");
-      
-      //PASSWORD STRENGTH CHECK
+
+         //PASSWORD STRENGTH CHECK
       } elseif ($user_password == $user_confirmpassword && strlen($user_password) < 8 || !$number || !$uppercase || !$lowercase || !$specialChars) {
-         echo "<script>alert('Password must be at least 8 characters in length and must contain at least one number, one upper case letter, one lower case letter and one special character.');window.history.go(-1);</script>";
-         echo "<script>window.location.href='register.php';</script>";
+         echo "<script>alert('Password must be at least 8 characters in length and must contain at least one number, one upper case letter, one lower case letter and one special character.');</script>";
+         echo "<script>window.history.go(-1);</script>";
       }
 
       //add register info
-      $sql = "insert into user (user_fullname, user_name, user_gender, user_email, user_phone, house_or_unit, street, postal_code, state, user_password, code)" .
-         "VALUES ('$user_fullname', '$user_name', '$user_gender', '$user_email', '$user_phone', '$house_no', '$street', '$postal_code', '$state', '" . md5($user_confirmpassword) . "', '$login_code');";
+      $sql = "INSERT INTO user (user_fullname, user_name, user_gender, user_email, 
+      user_phone, house_or_unit, street, postal_code, state, user_password, code) 
+         VALUES ('$user_fullname', '$user_name', '$user_gender', 
+         '$user_email', '$user_phone', '$house_no', '$street', '$postal_code', 
+         '$state', '" . MD5($user_confirmpassword) . "', '$login_code');";
       mysqli_query($conn, $sql);
 
       //check update query working or not

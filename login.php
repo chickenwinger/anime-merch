@@ -26,7 +26,7 @@
             echo "<script>window.location.href='homepage.php';</script>";
         }
 
-        //create cookies 
+        //CREATE SESSION VARIABLES
         if ($row = mysqli_fetch_array($result)) {
             $_SESSION['userid'] = $row['user_id'];
             $_SESSION['name'] = $row['user_fullname'];
@@ -42,7 +42,7 @@
             echo "<script>window.location.href='homepage.php';</script>";
         } else if ($_SESSION['role'] == "0") {
             echo "<script>alert('Welcome back! Admin ".$_SESSION['name']."')</script>";
-            echo "<script>window.location.href='homepage.php';</script>";
+            echo "<script>window.location.href='admin.php';</script>";
         }
     }
 

@@ -8,7 +8,7 @@
             <i class="fa fa-close" onclick="loginPopupClose()"></i>
          </div>
          <table align="center" class="login-form">
-            <form action="login.php" method="POST" name="login-form-tag" onsubmit="return submitUserForm();">
+            <form action="login.php" method="POST" onsubmit="return submitUserForm();">
                <tr>
                   <td>Username:</td>
                </tr>
@@ -31,7 +31,7 @@
                <tr>
                   <td>
                      <div class="g-recaptcha" data-sitekey="6LenZtweAAAAAHIquCCQdLrpsWHYtO4bKNNsCi3W" data-callback="verifyCaptcha"></div>
-                     <div id="g-recaptcha-error"></div>
+                     <div id="g-recaptcha-error" style="font-size: 14px; position: absolute"></div>
                   </td>
                </tr>
                <tr style="height: 10px;"></tr>

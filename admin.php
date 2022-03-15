@@ -5,13 +5,23 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Manage Product</title>
   <link rel="stylesheet" href="admin.css">
 </head>
 
 <body>
+  <!-- USER ACCESS CONTROL - DENY BUYER ACCESS -->
+  <?php
+  if (isset($_SESSION['login'])) {
+    if ($_SESSION['role'] == "1") {
+      echo "<script>alert('You do not have the access to this page!');</script>";
+      echo "<script>window.location.href='homepage.php'</script>";
+    }
+  }
+  ?>
+
   <!-- ADD NEW START -->
   <div class="admin-bg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -114,7 +124,7 @@
 
           echo "<td><a name='btnmodify' class='btnmodify' href='admin.php?product_id=" . $rows_product_list['product_id'] . "'>";
           echo "<i class='fa fa-pencil' style='font-size: 24px;'></i></a></td>";
-          echo "<td><a name='btndelete' href='remove-product.php?product_id=".$rows_product_list['product_id']."' class='btndelete'>";
+          echo "<td><a name='btndelete' href='remove-product.php?product_id=" . $rows_product_list['product_id'] . "' class='btndelete'>";
           echo "<i class='fa fa-trash-o' style='font-size: 24px;'></i></a></td>";
           echo "</tr>";
         }
